@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>index</title>
+
+</head>
+
+<body>
+	<h4 class="dasdass"></h4>
+	{%for num in list_groups%}
+	<div class="info">
+		<a href="{{num.0}}/{{num.1}}" class="info__link">
+			<div>
+				<table>
+					{{num.0}}
+				</table>
+				<table>
+					{{num.1}}
+				</table>
+			</div>
+
+		</a>
+	</div>
+
+	{%endfor%}
+
+</body>
+<style>
+	.info {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.info__link {
+		margin-right: 30px;
+		margin-bottom: 30px;
+		background-color: #222;
+		padding: 15px;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 7px;
+		transition: all ease .5s;
+		border: 1px solid transparent;
+	}
+
+	.info__link:hover {
+		background-color: #fff;
+		color: #000;
+		border-color: #222;
+	}
+</style>
+
+</html>

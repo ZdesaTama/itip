@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>доки</title>
+</head>
+
+<body>
+    <table>
+        <table>Имя преподователя : Номер работы : Ошибки : Оценка : Сылка на работу</table>
+        {%for work in works%}
+        <table>{{work.FCs}} : {{work.name_work}} : {{work.error}} : {{work.estimation}} : {{work.link_work}}</table>
+    </table>
+    {%endfor%}
+    <form method="post">
+        {% csrf_token %}
+        <select name="num_work">
+            <option disabled>Выберите номер работы</option>
+            {%for num in num_works%}
+            <option value="{{num}}">{{num}}</option>
+            {%endfor%}
+        </select>
+        <input type="text" name="link" placeholder="Ссылка на работу" required>
+        <input type="text" name="message" placeholder="Сообщение" required>
+        <input type="submit" value="Отправить">
+
+    </form>
+</body>
+
+</html>

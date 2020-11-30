@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>index</title>
+</head>
+
+<body>
+    <h4>{{answer}}</h4>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            {{forms}}
+        </table>
+        <input type="submit" value="Send">
+    </form>
+
+</body>
+
+</html>

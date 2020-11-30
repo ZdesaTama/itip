@@ -1,0 +1,400 @@
+
+/* ----- Specification ----- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font:400 14px 'Montserrat', sans-serif;
+  color: #000;
+}
+
+div, p, form, input, textarea, a, span, button {
+  box-sizing: border-box;
+  letter-spacing: 0.03em;
+}
+
+p {
+  margin: 0;
+  line-height: 1.25; 
+}
+
+ul, li, form {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/**/
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 29px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 21px;
+}
+
+h5 {
+  font-size: 19px;
+}
+
+h6 {
+  font-size: 13px;
+}
+
+/*h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+}*/
+
+/**/
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+a, button {
+  transition: all .4s ease;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+a:hover {
+  color: #FCAA4A;
+}
+
+input, input:hover, input:focus, input:active, 
+button, button:hover, button:focus, button:active {
+  outline: none;
+}
+
+*::-webkit-input-placeholder {
+  color: #acacac;
+  transition: all .4s ease;
+  font-size: 24px;
+}
+
+*::-moz-placeholder          {
+  color: #acacac;
+  transition: all .4s ease;
+  font-size: 24px;
+} 
+  /* Firefox 19+ */
+*:-moz-placeholder           {
+  color: #acacac;
+  transition: all .4s ease;
+  font-size: 24px;
+} 
+  /* Firefox 18- */
+*:-ms-input-placeholder      {
+  color: #acacac;
+  transition: all .4s ease;
+  font-size: 24px;
+}
+
+*:focus::-webkit-input-placeholder {
+  color:#000;
+}
+
+*:focus::-moz-placeholder          {
+  color:#000;
+}
+  /* Firefox 19+ */
+*:focus:-moz-placeholder           {
+  color:#000;
+} 
+  /* Firefox 18- */
+*:focus:-ms-input-placeholder      {
+  color:#000;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 13px;
+  color: #fff;
+  background-color: #1cb883;
+  max-width: 156px;
+  width: 100%;
+  padding: 9px 0px;
+  border-bottom: 4px solid #149d6f;
+  letter-spacing: 0;
+}
+
+.btn:hover {
+  border: 1px solid #149d6f;
+  background-color: transparent;
+  color: #fff; 
+  border-bottom: 4px solid #149d6f;
+  box-shadow: 0px 5px 14px #1cb369;
+}
+
+.btn:hover i {
+  color: #1cb883;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn i {
+  color: #46e6b0;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* ----- Header ----- */
+
+.navigation {
+  background-color: #212121;
+}
+
+.nav {
+  padding: 11px 0;
+  display: flex;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.logo {
+  display: flex;
+  margin-left: -110px;
+}
+
+.logo__name {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-right: 7px;
+  color: #fff;
+  text-transform: none;
+}
+
+.logo__img {
+  max-width: 54px;
+  max-height: 54px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 auto; 
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 32px;
+}
+
+.nav__link {
+
+}
+
+.nav__add {
+  display: flex;
+  align-items: center;
+  margin-left: 115px;
+}
+
+.nav__add-text {
+  font-weight: 700;
+}
+
+.nav__add-wrapper {
+  position: relative;
+  display: flex;
+  margin-left: 20px;
+}
+
+.nav__add-wrapper:after {
+  content: "";
+  width: 42px;
+  height: 42px;
+  border: 1px solid #FF8F65;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  box-sizing: border-box; 
+  transform: translateX(-50%) translateY(50%);
+}
+
+.nav__add-icon {
+  width: 23px;
+  height: 23px;
+}
+
+/* ----- form-add ----- */
+
+.form-adds {
+  padding: 60px 0;
+}
+
+.add-baloon {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.add-baloon__heading {
+  margin-bottom: 52px;
+}
+
+.add-baloon input:not(:last-of-type) {
+  margin-bottom: 26px;
+}
+
+.add-baloon__input {
+  font: 400 24px 'Montserrat', sans-serif;
+  border: 0px;
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  transition: all .3s ease;
+}
+
+.add-baloon__input:focus {
+  border-bottom-color: #fc0;
+}
+
+.add-baloon-rad {
+  display: flex;
+  font-size: 24px;
+}
+
+.add-baloon-rad:first-child label {
+  margin-right: 20px;
+}
+
+.add-baloon__radio {
+  margin-right: 5px;
+}
+
+/* для элемента input c type="radio" */
+  .custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  /* для элемента label связанного с .custom-radio */
+  .custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  /* создание в label псевдоэлемента  before со следующими стилями */
+  .custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  /* стили при наведении курсора на радио */
+  .custom-radio:not(:disabled):not(:checked)+label:hover::before {
+    border-color: #b3d7ff;
+  }
+  /* стили для активной радиокнопки (при нажатии на неё) */
+  .custom-radio:not(:disabled):active+label::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+  }
+  /* стили для радиокнопки, находящейся в фокусе */
+  .custom-radio:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  /* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
+  .custom-radio:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+  }
+  /* стили для радиокнопки, находящейся в состоянии checked */
+  .custom-radio:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+  }
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+  .custom-radio:disabled+label::before {
+    background-color: #e9ecef;
+  }
+
+/* Media Queries */
+
+/* 992-1200px */
+@media screen and (max-width: 1199.98px) {
+  
+}
+
+/* 768-992px */
+@media screen and (max-width: 991.98px) {
+  
+}
+
+/* 576-768px */
+@media screen and (max-width: 767.98px) {
+  
+}
+
+/* 320-576px */
+/*@media screen and (max-width: 575.98px) {
+  
+}*/
+
+/* 460-576px */
+@media screen and (max-width: 575.98px) {
+  
+}
+
+/* 320-460px */
+@media screen and (max-width: 460px) {
+  
+}
+
+
+

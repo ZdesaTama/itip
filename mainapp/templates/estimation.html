@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Оценочка</title>
+</head>
+
+<body>
+    <div>
+        {%for work in works%}
+        {{work.group}}
+        {{work.nmae_item}}
+        {{work.FC}}
+        {{work.link_work}}
+        {{work.error}}
+        {{work.estimation}}
+        {{work.message}}
+        {%endfor%}
+    </div>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                <table>
+                    Оценка
+                    <input type="text" name="estimation" placeholder="Оценка" value="-" required>
+                </table>
+            </div>
+            <div>
+                <table>
+                    Ошибки
+                    <input type="text" name="error" placeholder="Ошибки" value="-" required>
+                </table>
+            </div>
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+</body>
+
+</html>

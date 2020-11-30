@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>display</title>
+</head>
+
+<body>
+    {%for student in students%}
+    <div>
+        <h3>{{student.0}}</h3>
+        <div>
+            {%for i in student.1%}
+            <div>
+                <a href="{{student.0}}/{{i.0}}">Лаба №{{i.0}} : Оценка: {{i.2}} : Ошибки: <div>{{i.1}}</div></a>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+    {%endfor%}
+</body>
+
+</html>
